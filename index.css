@@ -1,0 +1,309 @@
+
+.container-fluid {
+    max-width: 1400px; 
+    margin: 0 auto;  
+}
+#achorTag{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+table{
+    border-spacing: 30px;
+}
+.dropbtn {
+    background-color: #FAC05B;
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    overflow: scroll;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #FAC05B;
+}
+
+.signin{
+    border-radius: 25px;border: none;background-color: black;color: white;
+    height:35px;width: 100px;
+}
+.img_div{
+height: 100px;
+}
+.img_div2, .img_div3{
+    border-radius: 100px;width: 100px; height:100px;
+}
+
+.header_2{
+    padding: 16px; height: 100px;
+}
+.header_2body{
+    margin-right:0px;height: 100px;width: 20%;margin-top: 2px; 
+}
+.section_02{
+    background-color: #FAC05B;height:40px;width:auto;padding: 6px;
+}
+
+.dropdown-content{
+    overflow: auto;height:450px;width: 400px;
+}
+.drp-down-data{
+    border: 1px solid brown;padding: 12px;box-shadow: 5px 5px 3px #FFFACD
+}.table_content{
+    width: 31%;border: 1px solid purple;text-align: center;
+    font-size:14px;font-weight: bold;padding: 10px;
+}
+.text_align{
+    align-items: center;
+    border-right: 1px solid #a1a1a1;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    
+}
+.text_align1{
+    align-items: center;
+    
+    display: flex;
+    justify-content: center;
+    
+}
+/* .row{
+    align-items: center;
+    justify-content: center;
+    
+    
+
+} */
+.notification_div{
+    align-items: center;border: 1px solid purple;
+  margin-left: 100px;margin-right: 50px;padding: 15px;border-radius: 10px;
+  margin-bottom: 20px;
+}
+.carousal_02{
+    border: 3px solid lawngreen;align-items: center; justify-content: center;
+    margin: 0px 200px 0px 200px; padding: 3px;
+}
+header {
+    background-color: lightgrey;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid lightgray
+    
+}
+header span{
+    cursor: pointer;
+    margin-right: 10px;
+}
+ footer {
+    background-color: white;
+    
+    text-align: center;
+    bottom: 0;
+    padding: 2px 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.modal1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content1 {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .modal2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+  }
+  
+
+  .modal-content2 {
+    background-color: #fff;
+    margin: 15% auto;
+    border-radius: 10px;
+    
+    width: 40%;
+    height: 40vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+
+  #carouselIndicators .carousel-control-prev,
+  #carouselIndicators .carousel-control-next{
+    width: 20px;
+    height: 25px;
+    background-color:green;
+    font-size: 20px;
+   /* bottom :30px !important;
+   top: auto;
+    opacity: .8; */
+  }
+  #carouselIndicators .carousel-control-prev{
+    left: 75%;
+    top: 5%;
+  }
+  #carouselIndicators .carousel-control-next{
+    right: 18%;
+    top: 5%;
+
+    
+}
+.container {
+    position: relative; /* Make the container a positioning context */
+    width: 400px; /* Set the width as needed */
+    height: 200px; /* Set the height as needed */
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the image behind text with a lower z-index */
+  }
+  
+  .text-content {
+    position: relative; /* Create a stacking context */
+    z-index: 1; /* Place the text in front of the image with a higher z-index */
+  }
+  html {
+    overflow-x: hidden;
+}
+
+.center-div {
+    display: none;
+    float: right;
+    margin-right: 35%;
+    
+    width: 30%;
+    margin-top: 10px;
+    border: 2px solid gray;
+    padding: 2%;
+    margin-bottom: 400px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.login_section{
+    align-items: center;
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    width: 100%;}
+
+    .login_form {
+        background-color: var(--whiteThemeBgColor);
+        border-radius: 0.5rem;
+        margin: auto;
+        padding: 2%;
+        width: 30%;}
+
+        .form_title {
+            margin-bottom: 20px;
+            text-align: center;
+        }    
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;}
+            .mb-3 {
+                margin-bottom: 1rem!important;
+            }  
+            .button_group {
+                margin-bottom: 10px;
+                text-align: end;
+            }  
+
+.button_group button {
+    background-color: #ad5389;;
+    border: 1px solid purple;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 6px;
+    width: 100px;
+}            
+
+.registration_form {
+    border-radius: 0.5rem;
+    margin: auto;
+    width: 50%;
+    height: 95vh;
+    overflow-y: auto;
+    padding: 1% 2%;
+    border: 2px solid gray;
+    background-color: lightgray;
+}
+.p-viewer{
+    float: right;
+    margin-top: -33px;
+    margin-right: 15px;
+    /* position: relative; */
+    z-index: 1;
+    cursor:pointer;
+  }
+
+
+  
+  

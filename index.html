@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BJRCY_</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.min.js">
+    <script src="./index.js"></script>
+
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <div id="google_element"> </div>
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+    <script>
+
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement("google_element");
+        }
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+
+
+
+        <!-- header Section 1 -->
+        <header class="d-flex justify-content-end p-2 col-md-12 col-sm-12 d-flex ">
+            <div id="google_element">
+                <span onclick="clicktoZoomIn()"><a href="#A-" id="achorTag">A-</a></span>
+                <span onclick="clicktoOriginal()"><a href="#A" id="achorTag">A</a></span>
+                <span onclick="clicktoZoomOut()"><a href="#A+" id="achorTag">A+</a></span>
+
+                <span id="changeColorToOriginal" style="background-color: white; padding: 5px;">
+                    <a href="#A" style=" text-decoration: none;color: black; ">A</a></span>
+
+                <span id="changeColorButton" style="background-color: black;  padding: 5px;">
+                    <a id="myAnchor" href="#A" style="text-decoration: none;color: white;">A</a></span>
+
+                <span>
+                    <Select style="width: 150px;">
+                        <option>Select Language</option>
+                        <option>Hindi</option>
+                        <option>Marathi</option>
+
+                    </Select>
+                </span>
+                <span><button id="signInBtn" ondblclick="backToSignIn()" onclick="goTosignIN()" class="signin">Sign
+                        In</button></span>
+
+
+            </div>
+        </header>
+
+        <!-- header section 2 -->
+        <div id="header2_section" class="row " style="width: 100%;margin-left: 0.9px;">
+            <div class="row col-md-2 col-sm-12 p-2 justify-content-center">
+                <div style="width: 100px; height: 100px;">
+                    <img src="images/satyamev jayte.jfif" class="img_div2">
+                </div>
+                <div style="width: 100px; height: 100px;">
+                    <img src="images/dr.jfif" class="img_div3">
+                </div>
+
+            </div>
+
+            <div class="row col-md-8 col-sm-12 text-center p-1"><span>
+                    <h3 id="text_design">Babu Jagjivan Ram Chhatrawas Yojna(BJRCY)
+                    </h3>
+                    <h4 id="text_design1">Government of Maharashtra</h4>
+                </span>
+            </div>
+            <div class="col-md-2 col-sm-12 " style="height: 100px;">
+                <span><img src="images/savitri.png" class="w-100 h-100"></span>
+            </div>
+
+        </div>
+
+        <!-- //Login Section         -->
+        <div id="loginForm" class="login_section" style="display: none;">
+            <div id="loginForm1" class="login_form login_sign mt-5"
+                style="background-color: lightgray;border: 1px solid gray;display: none;">
+                <div class="form_title">
+                    <h5 style="font-size: 14px;
+                     color: rgb(0, 0, 0);">Login</h5>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <p id="errorName" style="margin-bottom: 0px;color: red;"></p>
+                            <input onclick="eraseInput()" type="text" id="userID" name="userID"
+                                placeholder="Enter Email" class="form-control"></input>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <p id="errorpswd" style="margin-bottom: 0px;color: red;"></p>
+ 
+                            
+                            <input id="userPassword"  onclick="erasePassword()" type="password"  name="password"
+                                placeholder="Enter password" class="password form-control">
+                                 <span  class="p-viewer" >
+                                <i class="bi bi-eye-slash"></i>
+                                  
+                                 </span>
+                        </div>
+
+                    </div>
+
+                    <div class="button_group text-center">
+                        <button onclick="loginUser()">Login</button>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6 login_links" style="cursor: pointer;">
+                            <a href="#CreateNewAccount" style="text-decoration: none;color: black;">
+                                <h6 onclick="createAcc()">Create New Account</h6>
+                            </a>
+                        </div>
+
+                        <div class="col-6 login_links" style="cursor: pointer;">
+                            <a href="#ForgotPassword?" onclick="forgotPassword()" style="text-decoration: none;color: black;">
+                                <h6>Forgot Password?</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOrgot Password -->
+        <div id="forgotpswdSection" class="login_section" style="display: none;">
+            <div class="login_form" style="background-color: lightgray;border: 1px solid gray;">
+                <div style="text-align: end;cursor: pointer;">
+                    <a href="#login">
+                        <i class="bi bi-arrow-left" onclick="backToLogin()" title="Go to back" style="color: black;
+                        font-size: 25px;font-weight: bold;"></i>
+        
+                        </i>
+                    </a>
+                </div>
+                <div class="form_title"><h5 style="font-size: 14px;color: rgb(0, 0, 0);">Forgot Password</h5></div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <input onkeypress="clearIdField()" type="text"  id="confirmID" type="text" placeholder="Enter Email" class="form-control">
+                        <p id="ID1" style="margin-bottom: 0px;color: red;"></p>
+
+                    </input>
+                    </div></div>
+                <div class="row mb-3">
+                    <div class="col-12">
+
+                        <input id="confirmPswd" onkeypress="clearPswdField()" type="password"
+                         placeholder="Enter New PAssword" class="password form-control"></input>
+                        <p id="CPswd1" style="margin-bottom: 0px;color: red;"></p>
+                        <span  class="p-viewer" >
+                            <!-- <i class="bi bi-eye-slash"></i> -->
+                            <!-- <i class="bi bi-eye-slash-fill"></i> -->
+                              
+                             </span>
+                   
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+
+                        <input id="confirmPswd1" onkeypress="clearPswdField1()" type="password"
+                         placeholder="Confirm Password" class="password form-control"></input>
+                        <p id="CPswd2" style="margin-bottom: 0px;color: red;"></p>
+                        <span  class="p-viewer" >
+                            <i class="bi bi-eye-slash-fill"></i>
+                              
+                             </span>
+                    
+                    </div>
+                </div>
+                <div class="button_group text-center">
+                    <button onclick="OTPsend()">Reset</button>
+                </div>
+
+        
+            </div>
+        
+        </div>
+
+
+<!-- Loader 02 -->
+        <div id="loader1" class="text-center text-primary" style="display: none;">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+        </div>
+
+
+        <div id="myModal3" class="modal2">
+            <div class="modal-content2" style="text-align: center;">
+                <span style="color: red;">
+                    <i style="font-size: 60px;" class="bi bi-x-circle"></i>
+                </span>
+                <p style="color:gray;font-size: 20px;">Invalid User Name,User Does not Exist</p>
+                <button onclick="okToInvalidData()" style="border: none;width: 20%;border-radius: 15px;color: white;height: 20%;background-color: lightskyblue;
+            font-weight: bold;">
+                    OK</button>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- loader -->
+ <div id="loader" class="text-center text-primary" style="display: none;">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+        </div>
+
+
+        <div id="myModal2" class="modal2">
+            <div class="modal-content2" style="text-align: center;">
+                <span style="color: red;">
+                    <i style="font-size: 60px;" class="bi bi-x-circle"></i>
+                </span>
+                <p style="color:gray;font-size: 20px;">Invalid Credentials,User Does not Exist</p>
+                <button onclick="okToInvalid()" style="border: none;width: 20%;border-radius: 15px;color: white;height: 20%;background-color: lightskyblue;
+            font-weight: bold;">
+                    OK</button>
+            </div>
+        </div>
+
+        <!-- Hide Registration Section -->
+        <div id="registration_form" class="registration_form" style="display: none;">
+            <div class="form_title">
+                <h5 style="font-size: 14px;color: rgb(0, 0, 0);">Registration</h6>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <input id="schoolName1" onkeypress="changeFields()" type="text" class="form-control"
+                        placeholder="Enter Institute/ School Name">
+                    <p id="schoolName" style="color: red;margin-bottom: 0px;"></p>
+                </div>
+                <div class="col-6">
+                    <input id="applicantName1" onkeypress="changeFields1()" type="text" class="form-control"
+                        placeholder="Enter Applicant Name">
+                    <p id="applicantName" style="color: red;margin-bottom: 0px;"></p>
+
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-6">
+                    <textarea id="address1" onkeypress="changeFields2()" class="form-control" style="min-height: 75px;"
+                        cols="7" rows="3" placeholder="Enter Address..."></textarea>
+                    <p id="address" style="color: red;margin-bottom: 0px;"></p>
+
+                </div>
+                <div class="col-6">
+                    <input id="mobile1" onkeypress="changeFields3()" type="text" class="form-control mb-1"
+                        placeholder="Enter Mobile No.">
+                    <p id="mobile" style="color: red;margin-bottom: 0px;"></p>
+
+                    <input id="landMark1" onkeypress="changeFields4()" type="text" class="form-control"
+                        placeholder="Enter Landmark">
+                    <p id="landMark" style="color: red;margin-bottom: 0px;"></p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-6">
+                    <input id="city1" onkeypress="changeFields5()" type="text" class="form-control"
+                        placeholder="Enter City/Village Name">
+                    <p id="city" style="color: red;margin-bottom: 0px;"></p>
+
+                </div>
+                <div class="col-6">
+                    <input id="pinCode1" onkeypress="changeFields6()" type="text" class="form-control mb-1"
+                        placeholder="Enter Pin Code">
+                    <p id="pinCode" style="color: red;margin-bottom: 0px;"></p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-6">
+                    <input id="enterEmail1" onkeypress="changeFields7()" type="email" class="form-control"
+                        placeholder="Enter Email">
+                    <p id="enterEmail" style="color: red;margin-bottom: 0px;"></p>
+
+
+                </div>
+                <div class="col-6">
+                    <input id="enterPassword1" onkeypress="changeFields8()" type="text" class="form-control mb-1"
+                        placeholder="Enter Password">
+                        <span  class="p-viewer" >
+                            <i class="bi-eye"></i>
+                              
+                             </span>
+                    <p id="enterPassword" style="color: red;margin-bottom: 0px;"></p>
+
+                </div>
+
+            </div>
+            <h6 style="font-size: 13px;color: rgb(0, 0, 0);">Bank Details</h6>
+            <div class="row mt-2 mb-3">
+                <div class="col-6"><input id="accHolderName1" onkeypress="changeFields9()" type="text"
+                        class="form-control" placeholder="Enter Account Holder Name">
+                    <p id="accHolderName" style="color: red;margin-bottom: 0px;"></p>
+                </div>
+                <div class="col-6"><input type="text" onkeypress="changeFields10()" id="accNo1" class="form-control"
+                        placeholder="Enter Account Number">
+                    <p id="accNo" style="color: red;margin-bottom: 0px;"></p>
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-6"><input id="IFSC1" onkeypress="changeFields11()" type="text" class="form-control"
+                        placeholder="Enter IFSC Code">
+                    <p id="IFSC" style="color: red;margin-bottom: 0px;"></p>
+                </div>
+                <div class="col-6"><input id="BranchName1" onkeypress="changeFields12()" type="text"
+                        class="form-control" placeholder="Enter Branch Name">
+                    <p id="BranchName" style="color: red;margin-bottom: 0px;"></p>
+                </div>
+
+            </div>
+            <div class="mt-2 button_group text-center"><button onclick="register()" id="registerBtn">Register</button>
+            </div>
+            <div class="row mt-4">
+                <div class="col-6 login_links" style="cursor: pointer;">
+                    <a href="#alreadyRegister" onclick="alreadyReg()">
+                        <h6>Already Register?</h6>
+                    </a>
+                </div>
+                <div class="col-6 login_links" style="cursor: pointer;text-align: end;">
+                    <a href="#signIn" onclick="signIn()">
+                        <h6>Sign In</h6>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="loader" class="text-center text-primary" style="display: none;">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+        </div>
+
+        <div id="myModalRegister" class="modal1">
+            <div class="modal-content1" style="text-align: center;">
+                <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+                <!-- <img src="images/icons8-tick.gif" alt=""></img> -->
+                <p style="color: green;">Email ID is Already Register With Us</p>
+                <button onclick="closeModalRegister()"
+                    style="border: none;width: 100px;border-radius: 15px;color: green;font-weight: bold;">OK</button>
+            </div>
+        </div>
+
+
+        <div id="myModal4" class="modal2">
+            <div class="modal-content2" style="text-align: center;">
+                <span style="color: green;">
+                    <img src="images/icons8-tick.gif" style="margin-bottom: 25px;" alt=""></img>
+
+                    <!-- <i style="font-size: 60px;" class="bi bi-x-circle"></i> -->
+                </span>
+                <p style="color:gray;font-size: 20px;margin-bottom:40px">User Registration Successful !</p>
+                <button onclick="closeRegistration()" style="border: none;width: 20%;border-radius: 15px;color: white;height: 20%;background-color: lightskyblue;
+            font-weight: bold;">
+                    OK</button>
+            </div>
+        </div>
+
+
+
+
+        <!-- Nabar Content -->
+        <div id="navbarContent" style="width: 100%;">
+
+            <nav class=" navbar navbar-expand-md bg-info">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-light"></span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item dropdown">
+                            <a class=" btn  dropdown-toggle nav-link fw-bold " href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="margin: 0px 50px;">
+                                Statistic</a>
+                            <div class="dropdown-content" aria-labelledby="dropdownMenuLink"
+                                style="overflow: auto;height:400px;">
+
+                                <a class="dropdown-item" href="images/stat1.png"><img src="images/stat1.png" width="300"
+                                        height="250"> </a>
+                                <a class="dropdown-item" href="images/stat2.png"><img src="images/stat2.png" width="300"
+                                        height="250"> </a>
+                                <a class="dropdown-item" href="images/stat3.png"><img src="images/stat3.png" width="300"
+                                        height="250"> </a>
+                                <a class="dropdown-item" href="images/stat4.png"><img src="images/stat4.png" width="300"
+                                        height="250"></a>
+                                <a class="dropdown-item" href="images/stat5.png"><img src="images/stat5.png" width="300"
+                                        height="250"></a>
+                                <a class="dropdown-item" href="images/stat6.png"><img src="images/stat6.png" width="300"
+                                        height="250"></a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class=" btn  dropdown-toggle nav-link fw-bold" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="margin: 0px 50px;">Eligibility Criteria</a>
+                            <div class="dropdown-content" aria-labelledby="dropdownMenuLink"
+                                style="overflow: auto;height:400px;">
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>IMPLEMENTING AGENCIES AND THEIR ELIGIBILITY</p>
+                                    </div>
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE SCHEME IS IMPLEMENTED THROUGH THE STATE GOVERNMENTS,
+                                            UNION TERRITORY ADMINISTRATIONS AND THE CENTRAL & STATE UNIVERSITIES/
+                                            INSTITUTIONS.
+                                            THESE IMPLEMENTING AGENCIES ARE PROVIDED ELIGIBLE CENTRAL ASSISTANCE AS PER
+                                            PROVISIONS OF THE SCHEME,
+                                            FOR FRESH CONSTRUCTION OF HOSTEL BUILDINGS, FOR EXPANSION OF THE EXISTING
+                                            HOSTEL
+                                            FACILITIES
+                                            AND FOR PERIODIC REPAIR AND MAINTENANCE OF THE HOSTELS CONSTRUCTED UNDER
+                                            THIS
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE PROPOSAL FOR CONSTRUCTION/ EXPANSION/ REPAIR &MAINTENANCE OF HOSTELS BY
+                                            STATE
+                                            UNIVERSITIES/
+                                            INSTITUTIONS SHALL BE SUBMITTED TO THE RESPECTIVE STATE GOVERNMENT/ UT
+                                            ADMINISTRATION WHO,
+                                            IN TURN, WOULD FORWARD THE SAME ALONG WITH THEIR RECOMMENDATIONS TO THE
+                                            DEPARTMENT
+                                            OF SOCIAL JUSTICE
+                                            AND EMPOWERMENT,
+                                            GOVERNMENT OF INDIA FOR RELEASE OF GRANTS-IN-AID AS PER PROVISIONS OF THE
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            LIKEWISE, THE PROPOSAL OF CENTRAL UNIVERSITIES/ INSTITUTIONS SHALL BE
+                                            SUBMITTED TO
+                                            THE MINISTRY
+                                            THROUGH THEIR ADMINISTRATIVE
+                                            MINISTRIES/DEPARTMENTS ALONG WITH THEIR RECOMMENDATIONS FOR RELEASE OF
+                                            GRANTS-IN-AID
+                                            UNDER THE SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            LOCATION AND SCOPE OF HOSTELS
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            WHILE SANCTIONING HOSTELS, PRIORITY MAYBE GIVEN TO AREAS HAVING
+                                            CONCENTRATION OF
+                                            SC POPULATION OF 15% AND MORE, AND WITHOUT ADEQUATE HOSTEL FACILITIES FOR SC
+                                            STUDENTS.
+                                            PREFERENCE WILL BE GIVEN TO INTEGRATED HOSTELS
+                                            (PART OF ESTABLISHED EDUCATIONAL INSTITUTIONS) OVER STAND-ALONE HOSTELS.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            STATE GOVERNMENTS, WHILE SELECTING SCHOOLS FOR CONSTRUCTION OF HOSTELS WILL
+                                            GIVE PRIORITY TO TOP PERFORMING GOVERNMENT SCHOOLS NOT HAVING ANY HOSTEL AT
+                                            PRESENT.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            IN CASE OF GIRLS, THE HOSTELS WILL BE LOCATED IN AREAS HAVING LOW SC FEMALE
+                                            LITERACY.
+                                            THE GIRLS HOSTELS WILL BE CONSTRUCTED IN CLOSE VICINITY OF THE EDUCATIONAL
+                                            INSTITUTION.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            FOCUS WILL BE GIVEN ON CONSTRUCTION OF HOSTELS FOR MIDDLE AND HIGHER
+                                            SECONDARY
+                                            LEVELS OF EDUCATION.
+                                            HOWEVER, HOSTELS CAN ALSO BE CONSTRUCTED UNDER THE SCHEME FOR COLLEGE AND
+                                            UNIVERSITY
+                                            LEVELS OF EDUCATION.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE CONSTRUCTION OF BOUNDARY WALLS, TWO ROOMS SET QUARTER
+                                            FOR HOSTEL WARDENS AND ONE ROOM SET FOR CHOWKIDARS/ LADY GUARDS WOULD BE AN
+                                            INTEGRAL
+                                            PART OF THE SCHEME.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class=" btn  dropdown-toggle nav-link fw-bold" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="margin: 0px 50px;">Construction Norms</a>
+                            <div class="dropdown-content" aria-labelledby="dropdownMenuLink"
+                                style="overflow: auto;height:400px;">
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>STRENGTH OF THE HOSTELS</p>
+                                    </div>
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE CAPACITY PER HOSTEL SHOULD NOT NORMALLY EXCEED 100 STUDENTS.
+                                            IN EXCEPTIONAL CASES, HOSTELS WITH LARGER CAPACITIES (MAXIMUM UPTO 250
+                                            STUDENTS) CAN
+                                            BE CONSIDERED.
+                                            EACH HOSTEL ROOM SHOULD ACCOMMODATE AT LEAST 2-3 STUDENTS.
+                                            NO SINGLE ROOM ACCOMMODATION WOULD BE PROVIDED IN THE HOSTELS CONSTRUCTED
+                                            UNDER THE
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE CAPACITY PER HOSTEL SHOULD NOT NORMALLY EXCEED 100 STUDENTS.
+                                            IN EXCEPTIONAL CASES, HOSTELS WITH LARGER CAPACITIES (MAXIMUM UPTO 250
+                                            STUDENTS) CAN
+                                            BE CONSIDERED.
+                                            EACH HOSTEL ROOM SHOULD ACCOMMODATE AT LEAST 2-3 STUDENTS.
+                                            NO SINGLE ROOM ACCOMMODATION WOULD BE PROVIDED IN THE HOSTELS CONSTRUCTED
+                                            UNDER THE
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            COST NORMS
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            LOCATION AND SCOPE OF HOSTELS
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            FOR CONSTRUCTION
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            (A) THE COST NORMS FOR CONSTRUCTION/EXPANSION OF GIRLS AND BOYS HOSTELS WILL
+                                            BE AS
+                                            UNDER:
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            IN CASE OF GIRLS, THE HOSTELS WILL BE LOCATED IN AREAS HAVING LOW SC FEMALE
+                                            LITERACY.
+                                            THE GIRLS HOSTELS WILL BE CONSTRUCTED IN CLOSE VICINITY OF THE EDUCATIONAL
+                                            INSTITUTION.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            (I) NORTH EASTERN REGION : RS.3.50 LAKH PER INMATE
+                                            (II) NORTHERN HIMALAYAN REGIONS : RS.3.25 LAKH PER INMATE
+                                            (III) GANGETIC PLAINS &LOW HIMALAYAN REGION : RS.3.00 LAKH PER INMATE
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            (B) IN ADDITION TO THE ADMISSIBLE CENTRAL ASSISTANCE UNDER THE SCHEME,
+                                            A ONE-TIME GRANT OF RS.5000/- PER STUDENT WOULD ALSO BE PROVIDED FOR MAKING
+                                            PROVISIONS OF A COT, A TABLE AND A CHAIR FOR EACH STUDENT AND FOR COMMON
+                                            FACILITIES LIKE TELEVISION, COMPUTER, KITCHEN EQUIPMENT, ETC. THIS ONE-TIME
+                                            GRANT SHALL BE RELEASED AFTER UTILIZATION OF CENTRAL ASSISTANCE PROVIDED BY
+                                            THE GOVERNMENT ALONGWITH MATCHING SHARE OF IMPLEMENTING AGENCY, IF ANY,
+                                            FOR CONSTRUCTION, AND COMPLETION OF CONSTRUCTION OF THE HOSTEL IN ALL
+                                            RESPECTS
+
+                                        </p>
+                                    </div>
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            INFRASTRUCTURE MAINTENANCE:
+
+                                        </p>
+                                    </div>
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            CENTRAL ASSISTANCE FOR REPAIR AND MAINTENANCE OF THE OPERATIONAL HOSTELS
+                                            WILL BE
+                                            PROVIDED TO IMPLEMENTING AGENCIES, ONCE IN EVERY FIVE YEARS AFTER
+                                            OPERATIONALIZATION
+                                            OF THE HOSTEL.
+                                            IT WILL BE LIMITED TO A MAXIMUM OF RS.5.00 LAKH FOR ONE HOSTEL OF 50
+                                            INMATES,
+                                            RS.10.00 LAKH FOR 100
+                                            INMATES, RS.15.00LAKH FOR 150 INMATES AND SO ON. CENTRAL ASSISTANCE FOR
+                                            REPAIR AND
+                                            MAINTENANCE SHALL
+                                            BE PROVIDED FOR THE SC HOSTELS
+                                            CONSTRUCTED UNDER BJRCY BY THE STATE/ UT GOVERNMENTS AND CENTRAL & STATE
+                                            UNIVERSITIES/ INSTITUTIONS.
+
+                                        </p>
+                                    </div>
+                                </a>
+
+
+
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class=" btn  dropdown-toggle nav-link fw-bold" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="margin: 0px 50px;">Application Guideline</a>
+                            <div class="dropdown-content" aria-labelledby="dropdownMenuLink"
+                                style="overflow: auto;height:400px;">
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>IMPLEMENTING AGENCIES AND THEIR ELIGIBILITY</p>
+                                    </div>
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE SCHEME IS IMPLEMENTED THROUGH THE STATE GOVERNMENTS,
+                                            UNION TERRITORY ADMINISTRATIONS AND THE CENTRAL & STATE UNIVERSITIES/
+                                            INSTITUTIONS.
+                                            THESE IMPLEMENTING AGENCIES ARE PROVIDED ELIGIBLE CENTRAL ASSISTANCE AS PER
+                                            PROVISIONS OF THE SCHEME,
+                                            FOR FRESH CONSTRUCTION OF HOSTEL BUILDINGS, FOR EXPANSION OF THE EXISTING
+                                            HOSTEL
+                                            FACILITIES
+                                            AND FOR PERIODIC REPAIR AND MAINTENANCE OF THE HOSTELS CONSTRUCTED UNDER
+                                            THIS
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+
+                            </div>
+                        </li>
+
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class=" btn  dropdown-toggle nav-link fw-bold " href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Application Flow</a>
+                            <div class="dropdown-content" aria-labelledby="dropdownMenuLink"
+                                style="overflow: auto;height:400px;margin: 0px 50px;">
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>IMPLEMENTING AGENCIES AND THEIR ELIGIBILITY</p>
+                                    </div>
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE SCHEME IS IMPLEMENTED THROUGH THE STATE GOVERNMENTS,
+                                            UNION TERRITORY ADMINISTRATIONS AND THE CENTRAL & STATE UNIVERSITIES/
+                                            INSTITUTIONS.
+                                            THESE IMPLEMENTING AGENCIES ARE PROVIDED ELIGIBLE CENTRAL ASSISTANCE AS PER
+                                            PROVISIONS OF THE SCHEME,
+                                            FOR FRESH CONSTRUCTION OF HOSTEL BUILDINGS, FOR EXPANSION OF THE EXISTING
+                                            HOSTEL
+                                            FACILITIES
+                                            AND FOR PERIODIC REPAIR AND MAINTENANCE OF THE HOSTELS CONSTRUCTED UNDER
+                                            THIS
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE PROPOSAL FOR CONSTRUCTION/ EXPANSION/ REPAIR &MAINTENANCE OF HOSTELS BY
+                                            STATE
+                                            UNIVERSITIES/
+                                            INSTITUTIONS SHALL BE SUBMITTED TO THE RESPECTIVE STATE GOVERNMENT/ UT
+                                            ADMINISTRATION WHO,
+                                            IN TURN, WOULD FORWARD THE SAME ALONG WITH THEIR RECOMMENDATIONS TO THE
+                                            DEPARTMENT
+                                            OF SOCIAL JUSTICE
+                                            AND EMPOWERMENT,
+                                            GOVERNMENT OF INDIA FOR RELEASE OF GRANTS-IN-AID AS PER PROVISIONS OF THE
+                                            SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            LIKEWISE, THE PROPOSAL OF CENTRAL UNIVERSITIES/ INSTITUTIONS SHALL BE
+                                            SUBMITTED TO
+                                            THE MINISTRY
+                                            THROUGH THEIR ADMINISTRATIVE
+                                            MINISTRIES/DEPARTMENTS ALONG WITH THEIR RECOMMENDATIONS FOR RELEASE OF
+                                            GRANTS-IN-AID
+                                            UNDER THE SCHEME.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            LOCATION AND SCOPE OF HOSTELS
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            WHILE SANCTIONING HOSTELS, PRIORITY MAYBE GIVEN TO AREAS HAVING
+                                            CONCENTRATION OF
+                                            SC POPULATION OF 15% AND MORE, AND WITHOUT ADEQUATE HOSTEL FACILITIES FOR SC
+                                            STUDENTS.
+                                            PREFERENCE WILL BE GIVEN TO INTEGRATED HOSTELS
+                                            (PART OF ESTABLISHED EDUCATIONAL INSTITUTIONS) OVER STAND-ALONE HOSTELS.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            STATE GOVERNMENTS, WHILE SELECTING SCHOOLS FOR CONSTRUCTION OF HOSTELS WILL
+                                            GIVE PRIORITY TO TOP PERFORMING GOVERNMENT SCHOOLS NOT HAVING ANY HOSTEL AT
+                                            PRESENT.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            IN CASE OF GIRLS, THE HOSTELS WILL BE LOCATED IN AREAS HAVING LOW SC FEMALE
+                                            LITERACY.
+                                            THE GIRLS HOSTELS WILL BE CONSTRUCTED IN CLOSE VICINITY OF THE EDUCATIONAL
+                                            INSTITUTION.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            FOCUS WILL BE GIVEN ON CONSTRUCTION OF HOSTELS FOR MIDDLE AND HIGHER
+                                            SECONDARY
+                                            LEVELS OF EDUCATION.
+                                            HOWEVER, HOSTELS CAN ALSO BE CONSTRUCTED UNDER THE SCHEME FOR COLLEGE AND
+                                            UNIVERSITY
+                                            LEVELS OF EDUCATION.
+                                        </p>
+                                    </div>
+
+                                </a>
+
+                                <a href="#">
+                                    <div class="drp-down-data"
+                                        style="width: auto; height: auto;border: 1px solid rebeccapurple;">
+                                        <p>
+                                            THE CONSTRUCTION OF BOUNDARY WALLS, TWO ROOMS SET QUARTER
+                                            FOR HOSTEL WARDENS AND ONE ROOM SET FOR CHOWKIDARS/ LADY GUARDS WOULD BE AN
+                                            INTEGRAL
+                                            PART OF THE SCHEME.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+
+
+        <!-- carousal section 01 -->
+        <div id="carousal_02" style="width: 100%;">
+
+            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 " src="images/carousel1.jpeg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 " src="images/carousel2.jpeg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 " src="images/carousel3.jpeg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- Gallary Section -->
+        <div id="gallarySection" class="row text-center" style="width: 100%;margin-left: 1px;">
+            <div class=" col-md-6 col-sm-12 mt-2" id="gallaryDiv_1" >
+                <h4 style="font-size: 20px;">Notification</h4>
+                <div class="notification_div">
+                    <div class="row ">
+                        <div class="col-4 text_align d-flex flex-wrap">Serial Number</div>
+                        <div class="col-5 text_align">Title</div>
+                        <div class="col-2 text_align1 ">Download</div>
+                    </div>
+                </div>
+
+                <div class="notification_div">
+                    <div class="row ">
+                        <div class="col-4 text_align d-flex flex-wrap">1</div>
+                        <div class="col-5 text_align">Dummy Public</div>
+                        <div class="col-2 text_align1 ">
+                            <a href="images/pdf.pdf">
+                                <i class="bi bi-file-arrow-down-fill" style="font-size: 25px;color: purple;"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification_div">
+                    <div class="row ">
+                        <div class="col-4 text_align d-flex flex-wrap">2</div>
+                        <div class="col-5 text_align">
+                            <h6 style="font-size: 13px;">Declaration of Repair And MAINTENANCE</h6>
+                        </div>
+                        <div class="col-2 text_align1">
+                            <a href="images/pdf.pdf">
+                                <i class="bi bi-file-arrow-down-fill" style="font-size: 25px;color: purple;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notification_div">
+                    <div class="row ">
+                        <div class="col-4 text_align d-flex flex-wrap">3</div>
+                        <div class="col-5 text_align">
+                            <h6 style="font-size: 13px;">Declaration of New Application</h6>
+
+                        </div>
+                        <div class="col-2 text_align1 ">
+                            <a href="images/pdf.pdf">
+                                <i class="bi bi-file-arrow-down-fill" style="font-size: 25px;color: purple;"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-md-6 col-sm-12 mt-2" style="height:auto;margin: 0px;padding: 0px;">
+                <h4 style="font-size: 20px;">Our Galarry</h4>
+                <div class="row mt-5 " style="width: 60%;margin-left: 20%;margin-bottom: 15px;">
+                    <div class="col-2 ms-2 me-0"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+                    </div>
+                    <div class="col-2 ms-2"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+
+                    </div>
+                    <div class="col-2 ms-2"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+
+                    </div>
+                    <div class="col-2 ms-2"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+
+                    </div>
+
+
+                </div>
+                <div class="row" style="width: 60%;margin-left: 20%;margin-bottom: 15px;">
+                    <div class="col-2 ms-2 me-0"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+                    </div>
+                    <div class="col-2 ms-2"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+
+                    </div>
+                    <div class="col-2 ms-2"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+
+                    </div>
+                    <div class="col-2 ms-2"
+                        style="border: 3px solid gray;padding: 0px 0px 0px 0px;width: 60px;height: 60px;">
+                        <img src="./images/mobile1.jpg" width="55px" height="54px" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <!-- <div class="container" style="padding: 20px 100px;background-color: #D3D3D3;width: 100%; "> -->
+        <div class="row" id="about_section1" style="background-color: #989C9B;width:100%;margin: 0px;
+        z-index: 1;position: relative;height: 250px;">
+            <div class=" col-md-8 row-col-sm-12" style=" padding-left: 50px;position: relative;">
+                <div id="about_section2" class="background-image"
+                    style="background-color: #989C9B;">
+                    <img id="about_sectionIMG" src="images/MH-map-fotor-bg-remover-2023091191946.png" width="390px"
+                        height="200px" alt="img">
+                </div>
+
+                <div class="text-content" style="z-index: 1;color: white;">
+                    <h5 style="text-align: center;">About Us</h5>
+                    <p id="about_section3" style="font-size:small; color: black;font-weight: 600;">
+                        This scheme for construction of hostels is one of the means to
+                        enable and encourage students belonging to Scheduled Castes (SC) to
+                        attain quality education. Such hostels are immensely beneficial to the
+                        students hailing from rural and remote areas of the country. While the scheme
+                        of construction of hostels for SC girls is in operation from the Third Five Year
+                        Plan (1961-66), the same for boys was started
+                        with effect from the year 1989-90.
+                        The primary objective of the revised scheme is to attract implementing agencies for undertaking
+                        construction of hostels, especially for SC girls, towards the broader vision of containment
+                        and reduction of their dropout rate. The other objectives are:(i) having a girls/ boys hostel
+                        with a capacity of 100 seats, in every block headquarters of low literacy districts not having
+                        one as of now, by way of priority, (ii) repairing and proper maintenance of hostels, and (iii)
+                        having
+                        an effective mechanism for monitoring, review, etc.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-4  row-col-sm-12">
+
+                <div style="box-shadow: 20px 15px #888888;width: 202px;z-index: -1;margin-left: 50px;margin-top: 20px;">
+                    <img src="./images/schoolGirl.jpg" width="100%" height="200px" alt="">
+
+                </div>
+            </div>
+
+        </div>
+        <!-- </div> -->
+
+        <!-- //carousel----2 -->
+
+        <div id="caroural_2" style="width: 100%;padding-top: 25px;">
+
+            <div id="carouselIndicators" style="position: relative;z-index: 1;"
+                class="carousel slide col-md-12 col-sm-12" data-ride="carousel">
+                <div style=" margin: 10px 200px 0px 200px;">
+                    <div id="caroural_2" class="col-md-8   col-sm-12 ">
+                        <h4 style="margin: 0;padding: 0;">Our</h4>
+                        <h4 style="margin: 0;padding: 0;">Sucess Stories</h4>
+                    </div>
+                </div>
+
+
+
+
+                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only" style="color: red;"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only" style="color: red;"></span>
+                </a>
+
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="align-items: center;justify-content: center; padding: 3px;">
+                        <div class="d-flex col-md-12 col-sm-12"
+                            style="justify-content: center;">
+                            <div>
+                                <img class="d-block" width="100" height="100" src="./images/carousel4.png"
+                                    style="float: left;">
+
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <h6
+                                    style="font-size: 13px;font-weight: bold;justify-content: center;align-items: center;float: right;">
+                                    To improve the situation of child health and nutrition in Uttar Pradesh,
+                                    it is necessary to increase the participation of public community in related
+                                    services and
+                                    various departments
+                                    like Health Department, ICDS, Panchayati Raj Institutions and Rural Development
+                                    Department.
+                                    Efforts should be made jointly by integrating them. This is also a challenge because
+                                    fulfillment of child rights
+                                    is our responsibility.
+                                    Good health and nutrition is the right of every child born in the state
+
+                                </h6>
+                                <p style="font-weight: bold;font-size: 13px;text-align: center;"> JOB AIDS Tools For
+                                    ASHA Under
+                                    CCSP</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="d-flex col-md-12 col-sm-12"
+                            style="justify-content: center;">
+                            <div>
+                                <img class="d-block" width="100" height="100" src="./images/carousal -02.png" alt="">
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <h6
+                                    style="font-size: 13px;font-weight: bold;justify-content: center;align-items: center;">
+
+                                    Under the National Rural Health Mission,
+                                    Asha Scheme was launched in the state on 23 August 2005.
+                                    ASHA has an important role in the National Rural Health Mission for communityisation
+                                    of
+                                    health programmes.
+                                    To commemorate the implementation of Asha Yojana in the state, 23rd August is
+                                    celebrated as
+                                    Asha Day every year.
+                                    The objective of organizing ASHA Day/Conference is to encourage, boost morale and
+                                    honor the
+                                    ASHAs,
+                                    who are considered to be the basis of the Rural Health Mission,
+                                    for the commendable efforts made by them in the community.
+                                </h6>
+                                <p style="font-weight: bold;font-size: 13px;text-align: center;"> ASHA Conference
+                                    2009-2010</p>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="carousel-item " >
+                        <div class=" d-flex col-md-12 col-sm-12"
+                            style="justify-content: center;">
+                            <div>
+                                <img class="d-block" width="100" height="100" src="./images/carousal 03.png" alt="">
+                            </div>
+                            <div style="padding: 20px;">
+                                <h6
+                                    style="font-size: 13px;font-weight: bold;justify-content: center;align-items: center;">
+
+                                    Under the National Rural Health Mission, Asha Scheme was launched in the state on 23
+                                    August
+                                    2005.
+                                    ASHA has an important role in the National Rural Health Mission for communityisation
+                                    of
+                                    health programmes.
+                                    To commemorate the implementation of Asha Yojana in the state, 23rd August is
+                                    celebrated as
+                                    Asha Day every year.
+                                    The objective of organizing ASHA Day/Conference is to encourage, boost morale and
+                                    honor the
+                                    ASHAs,
+                                    who are considered to be the basis
+                                    of the Rural Health Mission, for the commendable efforts made by them in the
+                                    community.
+                                </h6>
+                                <p style="font-weight: bold;font-size: 13px;text-align: center;"> ASHA Conference
+                                    2009-2010</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Other Scheme Section  -->
+
+        <div id="otherScheme" style="width: 100%;">
+            <div style="text-align: center;color: green;font-weight: bold;">
+                <h4>Other Scheme</h4>
+
+            </div>
+            <div>
+                <div class="d-flex">
+                    <div class="col-md-3 col-sm-3 p-2" style="text-align: center;">
+                        <a href="" style="color: black;text-decoration: none;">Eaducation & Training</a><br>
+                        <a href="" style="color: black;text-decoration: none;">Economic Unliftment</a>
+
+                    </div>
+                    <div class="col-md-3 col-sm-3 p-2" style="text-align: center;">
+                        <a href="" style="color: black;text-decoration: none;">Employment</a><br>
+                        <a href="" style="color: black;text-decoration: none;">Special Assistance</a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 p-2" style="text-align: center;">
+                        <a href="" style="color: black;text-decoration: none;">Disability Welfare</a><br>
+                        <a href="" style="color: black;text-decoration: none;">Social Integration</a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 p-2" style="text-align: center;">
+                        <a href="" style="color: black;text-decoration: none;">Social Remedies</a><br>
+                        <a href="" style="color: black;text-decoration: none;">Awards</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr style="height: 1px;background-color: black;border: none;">
+
+        </div>
+
+        <!-- Feedback Section -->
+
+        <div id="feedbackForm" style="padding: 5px 20px 5px 20px ;margin-bottom: 20px;
+        color: white;background-color: black;width: 100%; ">
+            <div class="row">
+                <div class="col-md-2 col-sm-12"
+                    style="justify-content: center;padding: 25px;">
+                    <h6>Social Media</h6>
+                    <span><i class="bi bi-facebook text-light bg-dark p-1"></i></span>
+                    <span><i class="bi bi-twitter text-light bg-dark p-1"></i></span>
+                    <span><i class="bi bi-instagram text-light bg-dark p-1"></i></span>
+                    <span><i class="bi bi-youtube text-light bg-dark p-1"></i></span>
+                    <h6>Contact Us</h6>
+                    <span><i class="bi bi-telephone-fill  text-light bg-dark "
+                            style="font-size: 10px;margin-right: 5px;">
+
+                        </i> 020 - 26127569</span> <br>
+
+
+                    <span><i class="bi bi-envelope  text-light bg-dark " style="font-size: 10px;margin-right: 5px;"></i>
+                        fs.directorsw@gmail.com</span>
+
+
+
+                </div>
+
+                <div class="col-md-4 col-sm-12" style="padding: 25px;">
+                    <h6>Head Office</h6>
+                    <p>Babu Jagjivan Ram Chhatrawas Yojna, Government of Maharashtra Director.</p>
+                    <p>Social Welfare Department Commissionerate, 3, Church Gate Road Pune - 411001</p>
+                </div>
+
+                <div class="col-md-6 col-sm-12"
+                    style="height: auto;padding-bottom: 10px;float: right;">
+                    <h6 style="margin-bottom: 0px;text-align: center;">Feedback Form</h6><br>
+
+                    <p id="error" style="color: red;margin-bottom: 0;text-align: center;">
+                    </p><br>
+                    <div class="row">
+                        <div class="col-6">
+                            <span style="margin-right: 20px;">
+
+                                <input onclick="clearInput()" placeholder="Enter Full Name" type="text" id="name" style="width: 100%;height: 35px;
+                            border-radius: 5px;">
+
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <span>
+                                <input onclick="clearEmail()" id="email" placeholder="Email-Id" type="email" style="width: 100%;height: 35px;
+                            border-radius: 5px;">
+
+                            </span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <textarea onclick="clearText()" type="text" id="text" class="form-control"
+                            placeholder="Write Your Feedback Here..."></textarea>
+                    </div>
+
+                    <div style="display: flex;justify-content: center;align-items: center;margin-top: 5px;">
+
+                        <button onclick="submitForm()" class="btn btn-primary" data-bs-target="#myModal"
+                            style="border: none;border-radius: 10px;">Submit</button>
+
+                        <div id="myModal" class="modal1">
+                            <div class="modal-content1" style="text-align: center;">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <img src="images/icons8-tick.gif" alt=""></img>
+                                <p style="color: green;">Feedback Submitted successfully...</p>
+                                <button onclick="closeModal()"
+                                    style="border: none;width: 100px;border-radius: 15px;color: green;font-weight: bold;">OK</button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div style="padding-bottom: 30px;">
+                <h6 style="text-align: center;font-size: 13px; color: white;">Website Policy</h6>
+
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="col-md-12 ">
+            Website Content Managed & Owned by Ministry of Social Justice & Welfare Dept.
+            Government of Maharashtra </footer>
+
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+    </div>
+
+</body>
+
+
+</html>
